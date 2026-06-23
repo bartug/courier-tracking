@@ -1,6 +1,26 @@
 spring:
   application:
     name: courier-tracking
+  jackson:
+    serialization:
+      # Instant/tarih alanlarını epoch yerine ISO-8601 string olarak serialize et.
+      write-dates-as-timestamps: false
 
 server:
   port: 8080
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+courier-tracking:
+  # Kurye konum akışı ve mağaza giriş kurallarının ayarları.
+  store:
+    # Bir kuryenin mağazaya "girdi" sayılması için gereken yarıçap (metre).
+    entrance-radius-meters: 100
+    # Aynı mağazaya tekrar giriş, son girişin üzerinden bu süre geçmeden gelirse sayılmaz (saniye).
+    reentry-window-seconds: 60
+  # Mağaza konumlarının okunacağı kaynak dosya.
+  stores-file: classpath:stores.json
