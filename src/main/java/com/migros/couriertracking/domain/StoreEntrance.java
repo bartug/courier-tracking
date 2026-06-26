@@ -8,8 +8,9 @@ import lombok.ToString;
 
 /**
  * <h1>Mağaza Giriş Kaydı</h1>
- * <p>Bir kuryenin belirli bir mağazanın giriş yarıçapına girdiği anın kaydıdır. Tekrar giriş
- * kuralı gereği sayılan (loglanan) her giriş için bir kez oluşturulur.</p>
+ * <p>Bir kuryenin belirli bir mağazanın giriş yarıçapına girdiği anın kaydıdır.
+ * Tekrar giriş
+ * kuralı gereği loglanan her giriş için bir kez oluşturulur.</p>
  *
  * @author Bartug Sevindik
  * @since 23.06.2026
