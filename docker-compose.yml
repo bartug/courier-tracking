@@ -1,0 +1,7 @@
+services:
+  courier-tracking:
+    build: .
+    image: courier-tracking:1.0.0
+    container_name: courier-tracking
+    ports:
+      - "8080:8080"
